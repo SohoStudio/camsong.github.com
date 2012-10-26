@@ -247,6 +247,7 @@ multitask :push do
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
   puts "\n## copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
+  cp_r "/Users/camel/railsapp/rubyer.me/.", deploy_dir
   cd "#{deploy_dir}" do
     system "git add ."
     system "git add -u"
